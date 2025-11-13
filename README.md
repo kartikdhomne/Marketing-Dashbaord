@@ -18,7 +18,7 @@ Charts	Recharts
 Language	TypeScript
 ⚙️ Project Setup
 1. Clone the repository
-git clone https://github.com/<your-username>/ai-vibe-dashboard.git
+git clone https://github.com/<kartikdhomne>/ai-vibe-dashboard.git
 cd ai-vibe-dashboard
 
 2. Install dependencies
@@ -187,4 +187,9 @@ export default defineConfig([
   },
 ])
 ```
-# Marketing-Dashbaord
+✨ Author
+
+Kartik Dhomne
+Frontend Engineer — React | TypeScript | UI/UX Focused
+LinkedIn :- https://linkedin.com/in/<kartik-dhomne>
+ | Portfolio :- https://<kartikdhomne.vercel.app>
