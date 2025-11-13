@@ -191,5 +191,5 @@ export default defineConfig([
 
 Kartik Dhomne
 Frontend Engineer — React | TypeScript | UI/UX Focused
-LinkedIn :- https://linkedin.com/in/<kartik-dhomne>
- | Portfolio :- https://<kartikdhomne.vercel.app>
+LinkedIn :- https://linkedin.com/in/kartik-dhomne
+ | Portfolio :- https://kartikdhomne.vercel.app
