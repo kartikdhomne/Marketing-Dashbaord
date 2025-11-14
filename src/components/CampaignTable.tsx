@@ -14,7 +14,7 @@ export default function CampaignTable({
         role="table"
       >
         {/* ---------- HEADER ---------- */}
-        <thead className="bg-gradient-to-r from-white to-slate-50 dark:from-slate-700 dark:to-slate-800">
+        <thead className="bg-linear-to-r from-white to-slate-50 dark:from-slate-700 dark:to-slate-800">
           <tr>
             {[
               "Campaign",
@@ -82,11 +82,11 @@ export default function CampaignTable({
                 </span>
               </td>
 
-              {/* ✅ View Column — Always visible, bright text */}
+              {/* View Column */}
               <td className="px-4 py-3 text-center whitespace-nowrap">
                 <button
                   onClick={(e) => {
-                    e.stopPropagation(); // prevent triggering row click
+                    e.stopPropagation();
                     onSelect?.(c.id);
                   }}
                   className="text-sm font-medium text-indigo-600 hover:underline dark:text-indigo-400"

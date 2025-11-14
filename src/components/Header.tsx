@@ -23,14 +23,14 @@ export default function Header() {
 
   return (
     <header className="w-full py-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-      {/* --- Left Section: Logo + Text --- */}
+      {/* --- Section: Logo + Text --- */}
       <div className="flex items-center justify-between sm:justify-start sm:gap-3 w-full sm:w-auto">
         <div className="flex items-center gap-3">
           <div
             className={`w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg transition-colors duration-300 ${
               isDark
-                ? "bg-gradient-to-br from-slate-700 to-slate-500"
-                : "bg-gradient-to-br from-indigo-600 to-blue-400"
+                ? "bg-linear-to-br from-slate-700 to-slate-500"
+                : "bg-linear-to-br from-indigo-600 to-blue-400"
             }`}
           >
             AV
@@ -53,7 +53,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* --- Theme Toggle (desktop inline, mobile top-right) --- */}
+        {/* --- Theme Toggle --- */}
         <button
           onClick={toggleTheme}
           className={`p-2 rounded-lg focus:outline-none focus-visible:ring transition-colors duration-300 sm:hidden ${
@@ -79,7 +79,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* --- Right Section: Search + Buttons (desktop) --- */}
+      {/* --- Section: Search + Buttons (desktop) --- */}
       <div className="hidden sm:flex items-center gap-3">
         <div
           className={`flex items-center rounded-lg shadow px-3 py-1 gap-2 transition-colors duration-300 ${
@@ -151,7 +151,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* --- Mobile-only Search + New Campaign (below) --- */}
+      {/* --- Mobile-only Search + New Campaign --- */}
       <div className="flex flex-col gap-3 sm:hidden w-full">
         <button
           onClick={() => dispatch(addCampaign())}

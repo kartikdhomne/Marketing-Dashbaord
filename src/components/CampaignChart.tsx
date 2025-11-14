@@ -16,7 +16,7 @@ export default function CampaignChart({ campaign }: { campaign: Campaign }) {
   const [isDark, setIsDark] = useState(false);
   const dispatch = useDispatch();
 
-  // 👇 Detect dark mode changes dynamically
+  // Detect dark mode changes dynamically
   useEffect(() => {
     const observer = new MutationObserver(() => {
       setIsDark(document.documentElement.classList.contains("dark"));
@@ -26,20 +26,20 @@ export default function CampaignChart({ campaign }: { campaign: Campaign }) {
     return () => observer.disconnect();
   }, []);
 
-  // 👇 Prepare data for the chart
+  // Prepare data for the chart
   const data =
     campaign.daily?.map((d) => ({
       date: d.date.slice(5),
       ctr: +((d.clicks / Math.max(1, d.impressions)) * 100).toFixed(2),
     })) ?? [];
 
-  // 👇 Adjusted colors for dark/light modes
+  // Adjusted colors for dark/light modes
   const axisColor = isDark ? "#E2E8F0" : "#475569";
   const gridColor = isDark ? "#334155" : "#E2E8F0";
   const bgColor = isDark ? "#0F172A" : "#FFFFFF";
   const textColor = isDark ? "#F8FAFC" : "#1E293B";
 
-  // 👇 Line color varies by campaign status
+  // Line color varies by campaign status
   const lineColor =
     campaign.status === "Active"
       ? isDark
@@ -67,7 +67,7 @@ export default function CampaignChart({ campaign }: { campaign: Campaign }) {
       className="h-80 w-full flex flex-col rounded-xl p-4 shadow-inner transition-colors duration-500"
       style={{ backgroundColor: bgColor, color: textColor }}
     >
-      {/* ---- Header with Campaign Title and Delete Button ---- */}
+      {/* ---- Header */}
       <div className="flex items-center justify-between mb-3">
         <h2
           className={`text-lg font-semibold transition-colors duration-300 ${
